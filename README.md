@@ -10,16 +10,7 @@ This Script simulates images based on how people with colorblindness would perce
 * Use it from the **command line (super easy)**, or use it as a **library (advanced users).**
 * Supports **Daltonization and HSV Shifting algorithm.**
 
-
-## Installation
-
-### Downloading the script
-
-Go to the directory of your choice in terminal, and run the command below.
-```shell
-git clone https://github.com/tsarjak/Simulate-Correct-ColorBlindness.git
 ```
-
 ### Installing dependencies
 
 To run this script, you need to install three libraries for python. Use pip or conda (or any package manager of your choice) to download PIL, Numpy and OpenCV.
@@ -45,23 +36,6 @@ This will run all the available algorithms on the example image, and save the pr
 Check the directory and see if you have 5 processed + 1 original image. The processed (verified) and the original image are tagged in this readme file. If you want to verify further, have a look at the images in your computer and the images here.
 
 
-## Running the script
-
-*Control flags and description (For command line/terminal usage)*
-
-| Flag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Args type &nbsp; &nbsp; &nbsp; &nbsp;| Description | Default  | Needed? |
-| --------|:---------:|:-------:|:---:|---:|
-| -input       | *string* | Path to the input image to simulate/correct. | *None* | Yes |
-| -output      | *string* | Directory where all simulated/corrected images will be stored.| *None* | Yes |
-| -protanopia_degree | *float: [0,1]* | Degree of protanopia to simulate/correct. | *1.0* | No |
-| -deutranopia_degree | *float: [0,1]* | Degree of deutranopia to simulate/correct. | *1.0* | No |
-| -tritanopia_degree | *float: [0,1]* | Degree of tritanopia to simulate/correct. | *1.0* | No |
-| -sim_protanopia |  *None*  |    Use this flag to simulate Protanopia. | *False* | No |
-| -sim_deutranopia |  *None*  |    Use this flag to simulate deutranopia. | *False* | No |
-| -sim_tritanopia |  *None*  |    Use this flag to simulate tritanopia. | *False* | No |
-| -sim_hybrid |  *None*  |    Use this flag to simulate hybrid colorblindness. | *False* | No |
-| -correct_colors |  *None*  |    Use this flag to correct colors for protanopia and deutranopia. | *False* | No |
-| -run_all |  *None*  |    Use this flag to perform all operations (simulate + correct). | *False* | No |
   
 
 ### *How to run the script*
@@ -106,41 +80,6 @@ Essentially forcing the algorithm to not assume deutranopia.
 ```
 
 
-## Example Simulation Results: 
 
-### Original Image:
-![example_original](https://user-images.githubusercontent.com/9898343/113453323-c0fb2880-93d3-11eb-8c5f-1df504233313.jpg)
-
-### Simulating Protanopia, Degree = 1.0:
-![example_simulate_protanopia](https://user-images.githubusercontent.com/9898343/113453334-c6587300-93d3-11eb-8bc7-b14317aa84e2.png)
-
-### Simulating Deutranopia, Degree = 1.0:
-![example_simulate_deutranopia](https://user-images.githubusercontent.com/9898343/113453346-c9536380-93d3-11eb-99c3-08a6a3cfb7d6.png)
-
-### Simulating Tritanopia, Degree = 1.0:
-![example_simulate_tritanopia](https://user-images.githubusercontent.com/9898343/113453354-cd7f8100-93d3-11eb-8349-ad58e030cbf2.png)
-
-### Simulating Hybrid ColorBlindness, Protanopia_degree = Deutranopia_degree = 0.5
-![example_simulate_hybrid](https://user-images.githubusercontent.com/9898343/113453912-02d89e80-93d5-11eb-8a5b-575b92f99eb6.png)
-
-
-## Example Correction Results:
-Here, we will first correct the images, and then simulate the corrected image, to see if the difference is noticable.
-
-### Protanopia
-
-#### Correcting for Protanopia, Protanopia_degree = 0.9, Deutranopia_degree = 0.0
-![ex_corrected_protanopia](https://user-images.githubusercontent.com/9898343/113454436-3831bc00-93d6-11eb-9f11-34167fdec3b5.png)
-
-#### Simulating the corrected image for protanopia. Protanopia_degree = 0.9.
-![ex_simulate_corrected_protanopia](https://user-images.githubusercontent.com/9898343/113454441-3bc54300-93d6-11eb-9761-5468fa2e70e2.png)
-
-### Deutranopia
-
-#### Correcting for Deutranopia, Deutranopia_degree = 0.9, Protanopia_degree = 0.0
-![ex_corrected_deutranopia](https://user-images.githubusercontent.com/9898343/113454444-41228d80-93d6-11eb-999e-aff3e2434fc5.png)
-
-#### Simulating the corrected image for Deutranopia. Deutranopia_degree = 0.9.
-![ex_simulate_corrected_deutranopia](https://user-images.githubusercontent.com/9898343/113454461-45e74180-93d6-11eb-88b7-caed402e949c.png)
 
 
